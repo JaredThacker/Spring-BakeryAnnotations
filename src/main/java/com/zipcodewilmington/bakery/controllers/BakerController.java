@@ -20,12 +20,12 @@ public class BakerController {
         return new ResponseEntity<>(service.index(), HttpStatus.OK);
     }
 
-    @GetMapping(value = "/bakers/{id}")
+    @GetMapping("/bakers/{id}")
     public ResponseEntity<Baker> show(@PathVariable("id")Long id) {
         return new ResponseEntity<>(service.show(id), HttpStatus.OK);
     }
 
-    @PostMapping(value = "/bakers/")
+    @PostMapping("/bakers/")
     public ResponseEntity<Baker> create(@RequestBody Baker baker) {
         return new ResponseEntity<>(service.create(baker), HttpStatus.CREATED);
     }
